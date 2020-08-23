@@ -5,6 +5,8 @@ window.addEventListener('load', function () {
             'For date use command \'Whats the date today\' or simply \'date today\'','<br>',
             'Try \'how are you\'', '<br>',
             'Try \'What is this\'', '<br>',
+            'Try \'Who made this\'', '<br>',
+            'Try \'I like this project\'', '<br>',
             'For any help use command \'help me\'','<br><br>'];
     
     let cmd = document.querySelector('.cmdtxt');

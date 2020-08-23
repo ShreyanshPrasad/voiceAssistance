@@ -18,8 +18,10 @@ recognition.onresult = function (event) {
     tips.innerHTML += '<br>' + transcript + '<br>';
     var result = execute(transcript);
     tips.innerHTML += result + '<br>';
-
-    readOutLoud(result);
+    if(transcript.includes('I like this'))
+        readOutLoud('Thank you');
+    else
+        readOutLoud(result);
     console.log(transcript);
 };
 
@@ -49,9 +51,13 @@ function execute(command){
     if(command.includes('how are you'))
         return 'I am Fine';
     if(command.includes('what is this'))
-        return 'This is a simple Voice Command Line or Voice Assistant'
+        return 'This is a simple Voice Command Line or Voice Assistant';
     if(command.includes('help'))
-        return 'For help please go through the commands mentiond above'
+        return 'For help please go through the commands mentiond above';
+    if(command.includes('who made this'))
+        return 'SHREYANSH';
+    if(command.includes('I like this'))
+        return 'If you like this project, dont forget to give a star https://github.com/ShreyanshPrasad/voiceAssistance'
     return "Command not recognised";
 }
 
