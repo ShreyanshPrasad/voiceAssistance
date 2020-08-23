@@ -38,6 +38,9 @@ body{
 .content{
     text-align: justify;
 }
+#clr{
+    display: none;
+}
 #btn, #clr{
     padding: 5px 10px;
     transition: 0.5s all;
