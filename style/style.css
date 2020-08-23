@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+body{
+    background-size: 100vw 100vh;
+    background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%);
+    background-attachment: fixed;
+    text-align: center;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 10px;
+    padding: 10px;
+}
+#btn, #clr{
+    padding: 5px 10px;
+    transition: 0.5s all;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#btn:hover, #clr:hover{
+    transform: scale(1.25, 1.25);
+}
