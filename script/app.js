@@ -14,8 +14,12 @@ recognition.onstart = function () {
 recognition.onresult = function (event) {
     const current = event.resultIndex;
     const transcript = event.results[current][0].transcript;
-    readOutLoud(transcript);
-    changeTheme('dark mode');
+
+    tips.innerHTML += '<br>' + transcript + '<br>';
+    var result = execute(transcript);
+    tips.innerHTML += result + '<br>';
+
+    readOutLoud(result);
     console.log(transcript);
 };
 
@@ -29,12 +33,20 @@ clr.addEventListener('click', () => {
 
 function readOutLoud(message){
     const speech = new SpeechSynthesisUtterance();
-    speech.text = new Date().toTimeString();
+    speech.text = message;
     speech.volume = 1;
     speech.rate = 1;
     speech.pitch = 1;
     
     window.speechSynthesis.speak(speech);
+}
+
+function execute(command){
+    if(command.includes('time now'))
+        return new Date().toTimeString();
+    if(command.includes('date today'))
+        return new Date().toDateString();
+    return "Command not recognised";
 }
 
 function changeTheme (theme) {
