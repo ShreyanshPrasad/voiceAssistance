@@ -6,7 +6,6 @@ const commands = ['dark mode', 'light mode', 'default theme'];
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
-recognition.interimResults = true;
 
 recognition.onstart = function () {
     console.log('Listning...');
