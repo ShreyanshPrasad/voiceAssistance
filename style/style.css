@@ -8,15 +8,35 @@ body{
     background-size: 100vw 100vh;
     background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%);
     background-attachment: fixed;
-    text-align: center;
+}
+.cmdline{
+    text-align: left;
+    width: 70%;
+    border: 1px solid black;
+    margin: 20px;
+    padding: 20px;
+    background-color: black;
+    color: lime;
+    font-family: monospace;
+    font-size: large;
+    max-height: 85vh;
+    overflow: auto;
+    /*user-select: none;*/
+}
+.cmd{
+    margin-top: 15px;
 }
 .container{
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -20%);
     margin: 10px;
     padding: 10px;
+    text-align: center;
+}
+.content{
+    text-align: justify;
 }
 #btn, #clr{
     padding: 5px 10px;
@@ -25,5 +45,24 @@ body{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #btn:hover, #clr:hover{
-    transform: scale(1.25, 1.25);
+    transform: scale(1.1, 1.1);
+}
+
+@keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: lime;
+    }
+  }
+.blink{
+    animation: 1s blink step-end infinite;
+}
+
+@media only screen and (max-width: 768px) {
+    .cmdline{
+        margin: 10px 0;
+        width: 100%;
+    }
 }

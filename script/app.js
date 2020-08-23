@@ -1,10 +1,12 @@
 const btn = document.querySelector('#btn');
-const content = document.querySelector('.content');
+const clr = document.querySelector('#clr');
+const tips = document.querySelector('.tips');
 
 const commands = ['dark mode', 'light mode', 'default theme'];
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
+recognition.interimResults = true;
 
 recognition.onstart = function () {
     console.log('Listning...');
@@ -20,6 +22,10 @@ recognition.onresult = function (event) {
 
 btn.addEventListener('click', () => {
     recognition.start();
+});
+
+clr.addEventListener('click', () => {
+    tips.style.display = 'none';
 });
 
 function readOutLoud(message){
