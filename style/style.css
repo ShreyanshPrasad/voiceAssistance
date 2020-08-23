@@ -21,7 +21,7 @@ body{
     font-size: large;
     max-height: 85vh;
     overflow: auto;
-    /*user-select: none;*/
+    user-select: none;
 }
 .cmd{
     margin-top: 15px;
@@ -30,7 +30,7 @@ body{
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -20%);
+    transform: translate(-50%, -15%);
     margin: 10px;
     padding: 10px;
     text-align: center;
@@ -67,5 +67,6 @@ body{
     .cmdline{
         margin: 10px 0;
         width: 100%;
+        font-size: medium;
     }
 }

@@ -46,6 +46,12 @@ function execute(command){
         return new Date().toTimeString();
     if(command.includes('date today'))
         return new Date().toDateString();
+    if(command.includes('how are you'))
+        return 'I am Fine';
+    if(command.includes('what is this'))
+        return 'This is a simple Voice Command Line or Voice Assistant'
+    if(command.includes('help'))
+        return 'For help please go through the commands mentiond above'
     return "Command not recognised";
 }
 
