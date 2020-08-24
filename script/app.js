@@ -55,9 +55,9 @@ function execute(command){
     if(command.includes('help'))
         return 'For help please go through the commands mentiond above';
     if(command.includes('who made this'))
-        return 'SHREYANSH';
+        return 'Shreyansh';
     if(command.includes('I like this'))
-        return 'If you like this project, dont forget to give a star https://github.com/ShreyanshPrasad/voiceAssistance'
+        return 'If you like this project, dont forget to give a Star @ <a class="link" src="https://github.com/ShreyanshPrasad/voiceAssistance">https://github.com/ShreyanshPrasad/voiceAssistance</a>'
     return "Command not recognised";
 }
 

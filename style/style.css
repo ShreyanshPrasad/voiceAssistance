@@ -50,7 +50,10 @@ body{
 #btn:hover, #clr:hover{
     transform: scale(1.1, 1.1);
 }
-
+.link{
+    text-decoration: underline;
+    user-select: text;
+}
 @keyframes blink {
     from, to {
       color: transparent;
