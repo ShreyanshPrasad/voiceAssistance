@@ -1,5 +1,5 @@
 window.addEventListener('load', function () {
-    console.log('Loaded succesfully.');
+    
     let tipsArr = ['Welcome to VCL v1.0','<br>',
             'For time use command \'Whats the time now\' or simply \'time now\'','<br>',
             'For date use command \'Whats the date today\' or simply \'date today\'','<br>',
@@ -7,6 +7,9 @@ window.addEventListener('load', function () {
             'Try \'What is this\'', '<br>',
             'Try \'Who made this\'', '<br>',
             'Try \'I like this project\'', '<br>',
+            'Try \'Location\'', '<br>',
+            'Try \'Temperature\'', '<br>',
+            'Try \'Sunrise and Sunset\'', '<br>',
             'For any help use command \'help me\'','<br><br>'];
     
     let cmd = document.querySelector('.cmdtxt');
