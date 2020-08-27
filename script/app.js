@@ -96,9 +96,9 @@ function readOutLoud(message){
 
 function execute(command){
     if(command.includes('time now'))
-        return new Date().toTimeString();
+        return changeTime(new Date());
     if(command.includes('date today'))
-        return new Date().toDateString();
+        return changeDate(new Date());
     if(command.includes('how are you'))
         return 'I am Fine';
     if(command.includes('what is this'))
@@ -118,11 +118,23 @@ function execute(command){
     if(command.includes('temperature'))
         return `${temp} celsius`;
     if(command.includes('sunrise and sunset') || command.includes('sunrise') || command.includes('sunset'))
-    return `Sunrise at ${new Date(sunrise)} and Sunset at ${new Date(sunset)}`;
+    return `Sunrise at ${changeTime(new Date(sunrise))} and Sunset at ${changeTime(new Date(sunset))}`;
 }
 
 function changeTheme (theme) {
     if(theme.includes('dark mode')){
         document.bgColor = 'black';
     }
+}
+
+function changeDate(obj){
+    return obj.toLocaleString('en-US', {
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric'
+      });
+}
+
+function changeTime(obj){
+    return obj.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
 }
